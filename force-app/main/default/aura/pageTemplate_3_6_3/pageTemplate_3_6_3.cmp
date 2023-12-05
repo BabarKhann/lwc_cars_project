@@ -9,7 +9,7 @@
             <lightning:layoutItem aura:id="leftColumn" size="3">
                 {!v.left}
             </lightning:layoutItem>
-            <lightning:layoutItem aura:id="centerColumn" size="6">
+            <lightning:layoutItem aura:id="centerColumn" size="6" class="slds-m-around_x-small slds-m-top_none">
                 {!v.center}
             </lightning:layoutItem>
             <lightning:layoutItem aura:id="rightColumn" size="3">
