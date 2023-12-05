@@ -1,0 +1,9 @@
+<design:component label="3 Columns Layout: 3 6 3">
+
+    <flexipage:template>
+        <flexipage:region name="left" label="Left Region" defaultWidth="SMALL"></flexipage:region>
+        <flexipage:region name="center" label="Center Region" defaultWidth="LARGE"></flexipage:region>
+        <flexipage:region name="right" label="Right Region" defaultWidth="SMALL"></flexipage:region>
+    </flexipage:template>
+
+</design:component>
