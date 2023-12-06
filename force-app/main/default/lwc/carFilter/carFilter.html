@@ -1,3 +1,63 @@
 <template>
-    <lightning-card title="Filters" icon-name="standard:calibration"></lightning-card>
+  <lightning-card title="Filters" icon-name="standard:calibration">
+    <div class="slds-p-around_small">
+      <lightning-input
+        label="Search"
+        type="search"
+        onchange={handleSearchChange}
+        value={filters.searchKey}
+      ></lightning-input>
+
+      <div class="slds-m-top_small">
+        <lightning-slider
+          label="Price"
+          max="999999"
+          min="0"
+          size=" "
+          step="100"
+          type="horizontal"
+          value={filters.price}
+          variant="standard"
+          onchange={handlePriceChange}
+        ></lightning-slider>
+      </div>
+
+      <div class="catrgoties slds-m-top_small">
+        <h3 class="slds-text-heading_small">Categories</h3>
+        <template lwc:if={categories.data}>
+          <template for:each={categories.data.values} for:item="category">
+            <lightning-input
+              key={category.label}
+              type="checkbox"
+              label={category.label}
+              data-name="category"
+              data-value={category.value}
+              onchange={handleChange}
+              checked=""
+            ></lightning-input>
+          </template>
+        </template>
+
+        <template lwc:else> No Categories </template>
+      </div>
+
+      <div class="maketype slds-m-top_small">
+        <h3 class="slds-text-heading_small">Make</h3>
+        <template lwc:if={maketype.data}>
+          <template for:each={maketype.data.values} for:item="make">
+            <lightning-input
+              key={make.label}
+              type="checkbox"
+              label={make.label}
+              data-name="makeType"
+              data-value={make.value}
+              onchange={handleChange}
+              checked=""
+            ></lightning-input>
+          </template>
+        </template>
+        <template lwc:else> No Make Model </template>
+      </div>
+    </div>
+  </lightning-card>
 </template>
