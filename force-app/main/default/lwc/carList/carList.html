@@ -1,3 +1,18 @@
 <template>
-    <lightning-card title="Car List" icon-name="standard:account"></lightning-card>
+  <lightning-card title="Available Cars" icon-name="standard:account">
+    <div class="slds-p-around_small">
+      <template lwc:if={cars}>
+        <div class="slds-grid slds-wrap slds-m-around_none">
+          <template for:each={cars} for:item="car">
+            <c-car-tile-card
+              key={car.Id}
+              car={car}
+              class="slds-box slds-col slds-size_3-of-12 slds-text-align_center"
+            ></c-car-tile-card>
+          </template>
+        </div>
+      </template>
+      <template lwc:else> {error} </template>
+    </div>
+  </lightning-card>
 </template>

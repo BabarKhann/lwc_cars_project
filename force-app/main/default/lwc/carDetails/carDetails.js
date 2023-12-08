@@ -10,7 +10,7 @@ import NUMBER_OF_SEATS_FIELD from "@salesforce/schema/Car__c.Number_of_Seats__c"
 import CONTROL_FIELD from "@salesforce/schema/Car__c.Control__c";
 import { getFieldValue } from "lightning/uiRecordApi";
 
-export default class CarCard extends LightningElement {
+export default class CarDetails extends LightningElement {
   //   nameField = NAME_FIELD;
   //   pictureUrlField = PICTURE_URL_FIELD;
   categoryField = CATEGORY_FIELD;
@@ -20,7 +20,7 @@ export default class CarCard extends LightningElement {
   numberSeatsField = NUMBER_OF_SEATS_FIELD;
   controlField = CONTROL_FIELD;
 
-  recordId = "";
+  recordId = "a00QE000002RZmvYAG";
   objectApiName = "Car__c";
 
   carName;

@@ -1,0 +1,10 @@
+<template>
+  <img src={car.Picture_URL__c} alt={car.Name} />
+  <p>{car.Name}</p>
+  <lightning-formatted-number
+    value={car.MSRP__c}
+    format-style="currency"
+    currency-code="USD"
+    currency-display-as="symbol"
+  ></lightning-formatted-number>
+</template>
