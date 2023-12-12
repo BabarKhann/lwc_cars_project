@@ -6,7 +6,9 @@ export default class CarList extends LightningElement {
   cars;
   error;
 
-  @wire(getCars)
+  filters = {};
+
+  @wire(getCars, { filters: "$filters" })
   handleCars({ data, error }) {
     if (data) {
       this.cars = data;
