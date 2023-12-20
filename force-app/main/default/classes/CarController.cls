@@ -33,10 +33,9 @@ public with sharing class CarController {
     }
 
     String query =
-      'SELECT Id, Name, Picture_URL__c, Category__c, Make__c, MSRP__c, Fuel_Type__c, Number_of_Seats__c, Control__c FROM Car__c' +
+      'SELECT Id, Name, Picture_URL__c, Category__c, Make__c, MSRP__c, Fuel_Type__c, Number_of_Seats__c, Control__c FROM Car__c ' +
       whereClause +
-      ' WITH SECURITY_ENFORCED' +
-      ' ORDER BY Name';
+      ' WITH SECURITY_ENFORCED ORDER BY Name';
 
     return Database.query(query);
   }
@@ -46,7 +45,7 @@ public with sharing class CarController {
     @AuraEnabled
     public String searchKey { get; set; }
     @AuraEnabled
-    public String price { get; set; }
+    public Decimal price { get; set; }
     @AuraEnabled
     public String[] categories { get; set; }
     @AuraEnabled

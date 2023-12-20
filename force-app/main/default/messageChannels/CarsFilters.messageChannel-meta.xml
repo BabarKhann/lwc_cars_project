@@ -3,8 +3,8 @@
     <masterLabel>CarsFilters</masterLabel>
     <isExposed>false</isExposed>
     <description>This event fire when cars filter change.</description>
-    <LightningMessageFields>
+    <lightningMessageFields>
         <description>Current Car Filters</description>
         <fieldName>filters</fieldName>
-    </LightningMessageFields>
+    </lightningMessageFields>
 </LightningMessageChannel>
